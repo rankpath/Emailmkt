@@ -1,0 +1,11 @@
+{
+  "routes": [
+    { "path": "/", "title": "Email Sketch — Home" },
+    { "path": "/templates", "title": "Email Template Library" },
+    { "path": "/projects", "title": "Your Projects" },
+    { "path": "/projects/new", "title": "New Project" },
+    { "path": "/projects/:id", "title": "Project Templates" },
+    { "path": "/studio/:id", "title": "Email Sketch Studio" },
+    { "path": "/preview", "title": "Shared Email Preview" }
+  ]
+}

@@ -91,7 +91,7 @@ export default function Studio({ params }: { params: { id: string } }) {
   const missing = params.id !== "new" && !existing && params.id !== doc.id;
 
   useEffect(() => {
-    document.title = `${doc.name} — Email Sketch Studio`;
+    document.title = `${doc.name} — Email Sketch by Adscraft Digital`;
     const guard = (event: BeforeUnloadEvent) => {
       if (dirty) {
         event.preventDefault();
@@ -266,7 +266,7 @@ export default function Studio({ params }: { params: { id: string } }) {
             <span>Save</span>
           </button>
           <button
-            className="button yellow small"
+            className="button accent small"
             onClick={() => setExports(true)}
           >
             <Download size={15} />

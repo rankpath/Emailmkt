@@ -22,7 +22,16 @@ export function safeUrl(value: string, origin = ""): string {
   return "";
 }
 function safeColor(color: string) {
-  return /^#[a-f0-9]{6}$/i.test(color) ? color : "#171717";
+  return /^#[a-f0-9]{6}$/i.test(color) ? color : "#170528";
+}
+export function accentTextColor(accent: string) {
+  const hex = accent.replace("#", "");
+  if (!/^[a-f0-9]{6}$/i.test(hex)) return "#ffffff";
+  const r = parseInt(hex.slice(0, 2), 16);
+  const g = parseInt(hex.slice(2, 4), 16);
+  const b = parseInt(hex.slice(4, 6), 16);
+  const luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+  return luminance > 0.64 ? "#170528" : "#ffffff";
 }
 export function emailHtml(doc: EmailDocument, origin = ""): string {
   const accent = safeColor(doc.accent);
@@ -41,10 +50,10 @@ export function emailHtml(doc: EmailDocument, origin = ""): string {
         : "";
     }
     if (block.type === "button")
-      return `<tr><td align="center" style="padding:18px 30px 28px;"><table role="presentation" cellspacing="0" cellpadding="0"><tr><td bgcolor="${accent}" style="border-radius:4px;text-align:center;"><a href="${escapeHtml(safeUrl(block.url || "") || "#")}" style="display:inline-block;padding:16px 28px;color:${accent === "#ffd84d" ? "#171717" : "#ffffff"};text-decoration:none;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;">${content}</a></td></tr></table></td></tr>`;
+      return `<tr><td align="center" style="padding:18px 30px 28px;"><table role="presentation" cellspacing="0" cellpadding="0"><tr><td bgcolor="${accent}" style="border-radius:4px;text-align:center;"><a href="${escapeHtml(safeUrl(block.url || "") || "#")}" style="display:inline-block;padding:16px 28px;color:${accentTextColor(accent)};text-decoration:none;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;">${content}</a></td></tr></table></td></tr>`;
     return `<tr><td style="padding:16px 40px;"><hr style="border:0;border-top:1px solid ${color};opacity:0.15;"></td></tr>`;
   }
-  return `<!DOCTYPE html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(doc.name)}</title></head><body style="margin:0;padding:28px 12px;background:#efefed;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><table role="presentation" width="600" cellspacing="0" cellpadding="0" style="width:100%;max-width:600px;background:${background};"><tr><td style="padding:30px 30px 12px;text-align:center;color:${color};font-family:Arial,sans-serif;font-weight:bold;font-size:20px;letter-spacing:3px;">${escapeHtml(doc.brand)}</td></tr>${doc.blocks.map(renderBlock).join("")}<tr><td style="padding:20px 40px 35px;font-family:Arial,sans-serif;font-size:11px;text-align:center;color:${color};">${escapeHtml(doc.brand)} · Made with Email Sketch<br><br>Replace this footer with your business address and your ESP’s unsubscribe link before sending.</td></tr></table></td></tr></table></body></html>`;
+  return `<!DOCTYPE html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(doc.name)}</title></head><body style="margin:0;padding:28px 12px;background:#F4F1FA;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><table role="presentation" width="600" cellspacing="0" cellpadding="0" style="width:100%;max-width:600px;background:${background};"><tr><td style="padding:30px 30px 12px;text-align:center;color:${color};font-family:Arial,sans-serif;font-weight:bold;font-size:20px;letter-spacing:3px;">${escapeHtml(doc.brand)}</td></tr>${doc.blocks.map(renderBlock).join("")}<tr><td style="padding:20px 40px 35px;font-family:Arial,sans-serif;font-size:11px;text-align:center;color:${color};">${escapeHtml(doc.brand)} · Made with Email Sketch by Adscraft Digital<br><br>Replace this footer with your business address and your ESP’s unsubscribe link before sending.</td></tr></table></td></tr></table></body></html>`;
 }
 export function downloadText(
   filename: string,

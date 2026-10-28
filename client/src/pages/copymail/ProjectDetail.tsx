@@ -51,7 +51,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           </span>
           <h1>
             {project.name}
-            <span className="yellow-dot">.</span>
+            <span className="accent-dot">.</span>
           </h1>
           <p>{project.description || "Your next great email starts here."}</p>
         </div>

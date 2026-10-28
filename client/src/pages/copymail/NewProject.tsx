@@ -33,7 +33,7 @@ export default function NewProject() {
             <FolderPlus size={26} />
           </span>
           <h1>
-            A fresh start<span className="yellow-dot">.</span>
+            A fresh start<span className="accent-dot">.</span>
           </h1>
           <p>Give your next great email a place to call home.</p>
         </div>
@@ -81,7 +81,7 @@ export default function NewProject() {
               Cancel
             </a>
             <button
-              className="button yellow"
+              className="button accent"
               type="submit"
               disabled={!name.trim() || data.projects.length >= 3}
             >

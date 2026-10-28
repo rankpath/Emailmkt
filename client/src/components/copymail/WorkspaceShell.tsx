@@ -29,7 +29,7 @@ export function WorkspaceShell({
     <div className="workspace-app">
       <aside className={`workspace-sidebar ${menu ? "open" : ""}`}>
         <div className="sidebar-logo">
-          <Logo />
+          <Logo light />
           <button
             className="mobile-menu icon-button"
             onClick={() => setMenu(false)}

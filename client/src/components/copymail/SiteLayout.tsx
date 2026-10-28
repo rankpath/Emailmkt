@@ -3,7 +3,6 @@ import {
   Menu,
   X,
   ArrowUpRight,
-  ArrowRight,
   Instagram,
   Linkedin,
   Facebook,
@@ -79,13 +78,7 @@ const footerGroups = [
   },
   {
     title: "Our products",
-    links: [
-      "CopyElement",
-      "Email Sketch",
-      "CopyIcons",
-      "BrandKity",
-      "SEO45 AI",
-    ],
+    links: ["Scout101", "RankPath", "Email Sketch"],
   },
   {
     title: "Legal",
@@ -103,11 +96,29 @@ export function SiteFooter() {
   function footerLink(label: string) {
     if (label === "Contact Us")
       return <button onClick={() => setContact(true)}>{label}</button>;
+    const products: Record<string, string> = {
+      Scout101: "https://scout101.net/",
+      RankPath: "https://rank-path.com",
+      "Email Sketch": "/templates",
+    };
+    if (products[label]) {
+      const href = products[label];
+      const external = href.startsWith("http");
+      return (
+        <a
+          href={href}
+          {...(external
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
+        >
+          {label}
+        </a>
+      );
+    }
     const paths: Record<string, string> = {
       "About Us": "/#about",
       Pricing: "/#pricing",
       FAQ: "/#faq",
-      "Email Sketch": "/templates",
     };
     if (paths[label]) return <a href={paths[label]}>{label}</a>;
     const descriptions: Record<string, string> = {
@@ -131,7 +142,7 @@ export function SiteFooter() {
             title: label,
             text:
               descriptions[label] ||
-              `${label} is part of the product family listed in your brief. Its final website destination has not been provided.`,
+              `${label} is listed for this preview. Its final page has not been supplied.`,
           })
         }
       >
@@ -152,6 +163,15 @@ export function SiteFooter() {
               <br />
               Send something worth opening.
             </p>
+            <div className="adscraft-endorse">
+              <p className="adscraft-wordmark">
+                <span>ADSCRAFT</span>
+                <span>DIGITAL</span>
+              </p>
+              <p className="adscraft-tagline">
+                Get Found. Get Customers. Grow Better.
+              </p>
+            </div>
             <div className="social-links">
               {[
                 [Instagram, "Instagram"],
@@ -167,7 +187,7 @@ export function SiteFooter() {
                     onClick={() =>
                       setInfo({
                         title: String(name),
-                        text: `The official Email Sketch ${name} profile link can be connected before launch.`,
+                        text: `The official Adscraft Digital ${name} profile link can be connected before launch.`,
                       })
                     }
                   >
@@ -189,10 +209,8 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="footer-bottom wrap">
-          <span>© 2026 Email Sketch. All rights reserved.</span>
-          <span>
-            Made for better emails. <ArrowRight size={14} /> Powered by Webriy
-          </span>
+          <span>© 2026 Adscraft Digital</span>
+          <span>Get Found. Get Customers. Grow Better.</span>
         </div>
       </footer>
       <ContactDialog open={contact} onOpenChange={setContact} />

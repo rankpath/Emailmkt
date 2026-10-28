@@ -151,7 +151,7 @@ export default function Home() {
           <div className="hero-copy">
             <div className="hero-announcement">
               <Sparkles size={13} />
-              <span>A little inspiration. A lot of possibility.</span>
+              <span>Email Sketch by Adscraft Digital</span>
               <ArrowUpRight size={13} />
             </div>
             <h1>
@@ -231,14 +231,14 @@ export default function Home() {
               <span className="badge-status" />
             </div>
             <div className="floating-badge responsive-badge">
-              <span className="badge-icon yellow">
+              <span className="badge-icon accent">
                 <Smartphone size={16} />
               </span>
               Looks good. Everywhere.
               <Check size={14} />
             </div>
             <div className="studio-cursor">
-              <MousePointer2 size={23} fill="#171717" />
+              <MousePointer2 size={23} fill="#170528" />
               <span>You, but more creative</span>
             </div>
           </div>
@@ -267,7 +267,7 @@ export default function Home() {
               <h2>
                 A head start for
                 <br />
-                every kind of send<span className="yellow-dot">.</span>
+                every kind of send<span className="accent-dot">.</span>
               </h2>
             </div>
             <div className="section-heading-right">
@@ -349,9 +349,10 @@ export default function Home() {
                 More standing out.
               </h2>
               <p>
-                Finding a great email template shouldn’t take longer than
-                building the email. That’s why we created Email Sketch: a world of
-                possibilities, and one simple way to make them yours.
+                Email Sketch is a product of Adscraft Digital. Finding a great
+                email template shouldn’t take longer than building the email.
+                That’s why we created Email Sketch: a world of possibilities,
+                and one simple way to make them yours.
               </p>
               <p>
                 From newsletters to your next product launch, pair a beautiful
@@ -450,7 +451,7 @@ export default function Home() {
                       <i />
                     </div>
                     <div className="mini-cursor">
-                      <MousePointer2 size={22} fill="#171717" />
+                      <MousePointer2 size={22} fill="#170528" />
                       <span>Make it yours</span>
                     </div>
                   </div>
@@ -475,7 +476,7 @@ export default function Home() {
               </div>
             </div>
             <div className="feature-side">
-              <div className="feature-card yellow-card">
+              <div className="feature-card accent-card">
                 <span className="feature-icon">
                   <Layers size={22} />
                 </span>

@@ -1,4 +1,4 @@
-# CopyMail — Email Templates & Studio
+# Emailmkt — Email Templates & Studio
 
 React / Express / tRPC / Drizzle starter, adapted from the Sandbox web-db-user template.
 

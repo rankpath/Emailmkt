@@ -43,7 +43,7 @@ export default function Workspace() {
             <span />A little space for big ideas
           </span>
           <h1>
-            Your projects<span className="yellow-dot">.</span>
+            Your projects<span className="accent-dot">.</span>
           </h1>
           <p>Your next great campaign starts with a project.</p>
         </div>
@@ -149,7 +149,7 @@ export default function Workspace() {
           <div className="saved-drafts-heading">
             <div>
               <h2>
-                Your saved drafts<span className="yellow-dot">.</span>
+                Your saved drafts<span className="accent-dot">.</span>
               </h2>
               <p>
                 Great ideas don’t always start with a project. Pick up where you

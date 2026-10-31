@@ -8,14 +8,14 @@ const pages = [
   {
     path: "",
     element: <Home />,
-    title: "Email Sketch — Email Templates, Made Yours",
+    title: "Email Sketch by Adscraft Digital — Email Templates, Made Yours",
     description:
-      "Great emails start here. Explore professional email templates, customize your design in Email Sketch Studio, and export HTML to your favorite email platform.",
+      "Email Sketch by Adscraft Digital. Great emails start here. Explore professional email templates, customize your design in Email Sketch Studio, and export HTML to your favorite email platform.",
   },
   {
     path: "templates",
     element: <Templates />,
-    title: "Email Template Library — Email Sketch",
+    title: "Email Template Library — Email Sketch by Adscraft Digital",
     description:
       "Find your next great email. Browse editable newsletter, e-commerce, promotional and onboarding examples, preview each design, and make it yours in Studio.",
   },

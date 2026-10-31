@@ -31,13 +31,14 @@ function Routes() {
     }
     if (location.startsWith("/studio/")) return;
     const titles: Record<string, string> = {
-      "/": "Email Sketch — Email Templates, Made Yours",
-      "/templates": "Email Template Library — Email Sketch",
-      "/projects": "Your Projects — Email Sketch Studio",
-      "/projects/new": "New Project — Email Sketch Studio",
-      "/preview": "Shared Email Preview — Email Sketch",
+      "/": "Email Sketch by Adscraft Digital — Email Templates, Made Yours",
+      "/templates": "Email Template Library — Email Sketch by Adscraft Digital",
+      "/projects": "Your Projects — Email Sketch by Adscraft Digital",
+      "/projects/new": "New Project — Email Sketch by Adscraft Digital",
+      "/preview": "Shared Email Preview — Email Sketch by Adscraft Digital",
     };
-    document.title = titles[location] || "Your Workspace — Email Sketch";
+    document.title =
+      titles[location] || "Your Workspace — Email Sketch by Adscraft Digital";
     if (!window.location.hash) window.scrollTo(0, 0);
   }, [location]);
   return (

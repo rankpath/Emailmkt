@@ -4591,7 +4591,7 @@ svg {
   }
 }
 
-/* Email Sketch: the original browser storage key and routes stay unchanged. */
+/* The original browser storage key and routes stay unchanged. */
 .logo-mark img {
   display: block;
   width: 100%;
@@ -5116,7 +5116,37 @@ select:focus {
   .gallery-page::after {
     display: none;
   }
-  .studio-header .brand-lockup {
+  .studio-header .logo-lockup {
     display: none;
+  }
+  .studio-header .logo-icon-only {
+    display: block;
+    height: 32px;
+  }
+}
+
+/* Approved Emailmkt lockup. Orange and lavender live in the SVG only. */
+.wordmark {
+  line-height: 0;
+  gap: 0;
+}
+.logo-lockup {
+  display: block;
+  height: 44px;
+  width: auto;
+}
+.logo-icon-only {
+  display: none;
+  height: 36px;
+  width: auto;
+}
+.workspace-sidebar .logo-lockup,
+.site-footer .logo-lockup {
+  height: 48px;
+}
+@media (max-width: 640px) {
+  .site-header .logo-lockup,
+  .shared-preview-page > header .logo-lockup {
+    height: 34px;
   }
 }

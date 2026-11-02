@@ -57,7 +57,7 @@ export default function Templates() {
           </p>
           <span className="catalog-note">
             <LayoutTemplate size={14} /> 12 editable examples · Preview of the
-            Email Sketch library
+            Emailmkt library
           </span>
         </div>
         <div className="gallery-tools">

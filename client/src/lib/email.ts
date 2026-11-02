@@ -53,7 +53,7 @@ export function emailHtml(doc: EmailDocument, origin = ""): string {
       return `<tr><td align="center" style="padding:18px 30px 28px;"><table role="presentation" cellspacing="0" cellpadding="0"><tr><td bgcolor="${accent}" style="border-radius:4px;text-align:center;"><a href="${escapeHtml(safeUrl(block.url || "") || "#")}" style="display:inline-block;padding:16px 28px;color:${accentTextColor(accent)};text-decoration:none;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;">${content}</a></td></tr></table></td></tr>`;
     return `<tr><td style="padding:16px 40px;"><hr style="border:0;border-top:1px solid ${color};opacity:0.15;"></td></tr>`;
   }
-  return `<!DOCTYPE html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(doc.name)}</title></head><body style="margin:0;padding:28px 12px;background:#F4F1FA;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><table role="presentation" width="600" cellspacing="0" cellpadding="0" style="width:100%;max-width:600px;background:${background};"><tr><td style="padding:30px 30px 12px;text-align:center;color:${color};font-family:Arial,sans-serif;font-weight:bold;font-size:20px;letter-spacing:3px;">${escapeHtml(doc.brand)}</td></tr>${doc.blocks.map(renderBlock).join("")}<tr><td style="padding:20px 40px 35px;font-family:Arial,sans-serif;font-size:11px;text-align:center;color:${color};">${escapeHtml(doc.brand)} · Made with Email Sketch by Adscraft Digital<br><br>Replace this footer with your business address and your ESP’s unsubscribe link before sending.</td></tr></table></td></tr></table></body></html>`;
+  return `<!DOCTYPE html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(doc.name)}</title></head><body style="margin:0;padding:28px 12px;background:#F4F1FA;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><table role="presentation" width="600" cellspacing="0" cellpadding="0" style="width:100%;max-width:600px;background:${background};"><tr><td style="padding:30px 30px 12px;text-align:center;color:${color};font-family:Arial,sans-serif;font-weight:bold;font-size:20px;letter-spacing:3px;">${escapeHtml(doc.brand)}</td></tr>${doc.blocks.map(renderBlock).join("")}<tr><td style="padding:20px 40px 35px;font-family:Arial,sans-serif;font-size:11px;text-align:center;color:${color};">${escapeHtml(doc.brand)} · Made with Emailmkt by Adscraft<br><br>Replace this footer with your business address and your ESP’s unsubscribe link before sending.</td></tr></table></td></tr></table></body></html>`;
 }
 export function downloadText(
   filename: string,
@@ -72,7 +72,7 @@ export function filename(name: string) {
     name
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-|-$/g, "") || "email-sketch-email"
+      .replace(/^-|-$/g, "") || "emailmkt-email"
   );
 }
 export function encodePreview(doc: EmailDocument): string {

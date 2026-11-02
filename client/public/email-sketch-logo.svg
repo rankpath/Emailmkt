@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <title>Email Sketch</title>
-  <rect width="64" height="64" rx="14" fill="#F4F1FA"/>
-  <path d="M11 30.5 32 43.2 53 30.5V49L32 57.2 11 49V30.5Z" fill="#111633"/>
-  <path d="M32 43.2 53 30.5V49L32 57.2V43.2Z" fill="#7646D6"/>
-  <path d="M11 30.5 32 18.2 53 30.5 32 40.2 11 30.5Z" fill="#170528"/>
-  <path d="M32 18.2 53 30.5 32 40.2V18.2Z" fill="#8B62E0"/>
-  <path d="M18 45.2 32 52.4 46 45.2" stroke="#F4F1FA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>

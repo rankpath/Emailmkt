@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <title>Email Sketch</title>
-  <rect width="64" height="64" rx="14" fill="#111633"/>
-  <path d="M8 28.5 32 42.5 56 28.5V48L32 57.5 8 48V28.5Z" fill="#7646D6"/>
-  <path d="M8 28.5 32 16 56 28.5 32 39.2 8 28.5Z" fill="#9A74E8"/>
-  <path d="M16 44.5 32 53 48 44.5" stroke="#F4F1FA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="16 12 224 224"><path fill="#7646d6" d="m40 120 6-68c1-9 8-12 15-6l55 50zm176 0-6-68c-1-9-8-12-15-6l-55 50z"/><rect width="16" height="40" x="120" y="44" fill="#7646d6" rx="8"/><circle cx="128" cy="40" r="20" fill="#ffa834"/><rect width="208" height="140" x="24" y="84" fill="#7646d6" rx="30"/><path fill="none" stroke="#f4f1fa" stroke-linecap="round" stroke-linejoin="round" stroke-width="22" d="m56 112 72 48 72-48"/><circle cx="80" cy="186" r="27" fill="#ffa834"/><circle cx="176" cy="186" r="27" fill="#ffa834"/></svg>

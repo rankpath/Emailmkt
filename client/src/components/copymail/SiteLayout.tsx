@@ -78,7 +78,7 @@ const footerGroups = [
   },
   {
     title: "Our products",
-    links: ["Scout101", "RankPath", "Email Sketch"],
+    links: ["Scout101", "RankPath", "Emailmkt"],
   },
   {
     title: "Legal",
@@ -99,7 +99,7 @@ export function SiteFooter() {
     const products: Record<string, string> = {
       Scout101: "https://scout101.net/",
       RankPath: "https://rank-path.com",
-      "Email Sketch": "/templates",
+      Emailmkt: "/templates",
     };
     if (products[label]) {
       const href = products[label];
@@ -129,7 +129,7 @@ export function SiteFooter() {
       "Privacy Policy":
         "This preview stores projects and email drafts in localStorage on your browser. There is no cloud account or cross-device synchronization. Shared preview links contain the email content you choose to share.",
       "Terms & Conditions":
-        "Final terms for the Email Sketch service have not been supplied. This preview is for evaluating the website and browser-local editor; it is not an active paid service.",
+        "Final terms for the Emailmkt service have not been supplied. This preview is for evaluating the website and browser-local editor; it is not an active paid service.",
       "Cancellation & Refunds":
         "No paid subscription or payment processing is enabled in this preview. Final cancellation and refund terms should be supplied before activating paid plans.",
       "GDPR Compliance":
@@ -163,15 +163,6 @@ export function SiteFooter() {
               <br />
               Send something worth opening.
             </p>
-            <div className="adscraft-endorse">
-              <p className="adscraft-wordmark">
-                <span>ADSCRAFT</span>
-                <span>DIGITAL</span>
-              </p>
-              <p className="adscraft-tagline">
-                Get Found. Get Customers. Grow Better.
-              </p>
-            </div>
             <div className="social-links">
               {[
                 [Instagram, "Instagram"],
@@ -187,7 +178,7 @@ export function SiteFooter() {
                     onClick={() =>
                       setInfo({
                         title: String(name),
-                        text: `The official Adscraft Digital ${name} profile link can be connected before launch.`,
+                        text: `The official Emailmkt by Adscraft ${name} profile link can be connected before launch.`,
                       })
                     }
                   >

@@ -37,9 +37,11 @@ describe("Emailmkt by Adscraft", () => {
     expect(css).toContain("poppins");
     expect(css).toContain("noto sans thai");
     expect(css).toContain("#7646d6");
+    expect(css).toContain("#ffb800");
+    expect(css).toContain("#fff8e6");
+    expect(css).toContain("#ffd465");
     expect(css).toContain("#111633");
     expect(css).toContain("#170528");
-    expect(css).toContain("#f4f1fa");
     expect(css).not.toContain("#ffd84d");
     expect(css).not.toContain("manrope");
     expect(layout).toContain("© 2026 Adscraft Digital");

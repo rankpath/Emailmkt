@@ -25,13 +25,25 @@ function safeColor(color: string) {
   return /^#[a-f0-9]{6}$/i.test(color) ? color : "#170528";
 }
 export function accentTextColor(accent: string) {
-  const hex = accent.replace("#", "");
-  if (!/^[a-f0-9]{6}$/i.test(hex)) return "#ffffff";
-  const r = parseInt(hex.slice(0, 2), 16);
-  const g = parseInt(hex.slice(2, 4), 16);
-  const b = parseInt(hex.slice(4, 6), 16);
-  const luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
-  return luminance > 0.64 ? "#170528" : "#ffffff";
+  if (!/^#[a-f0-9]{6}$/i.test(accent)) return "#ffffff";
+
+  // WCAG relative luminance uses linearized sRGB, not raw RGB values.
+  const luminance = (hex: string) => {
+    const channels = [1, 3, 5].map(offset => {
+      const value = parseInt(hex.slice(offset, offset + 2), 16) / 255;
+      return value <= 0.04045
+        ? value / 12.92
+        : ((value + 0.055) / 1.055) ** 2.4;
+    });
+    return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2];
+  };
+  const background = luminance(accent);
+  const contrast = (foreground: string) => {
+    const text = luminance(foreground);
+    return (Math.max(background, text) + 0.05) / (Math.min(background, text) + 0.05);
+  };
+
+  return contrast("#170528") >= contrast("#ffffff") ? "#170528" : "#ffffff";
 }
 export function emailHtml(doc: EmailDocument, origin = ""): string {
   const accent = safeColor(doc.accent);

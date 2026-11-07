@@ -2,32 +2,30 @@ import { describe, it, expect } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import { readFileSync } from "node:fs";
 import { Logo, EmailView } from "../components/copymail/EmailView";
-import { BRAND_NAME, BRAND_LOGO_URL } from "./brand";
+import { BRAND_LOCKUP, BRAND_LOGO_LIGHT, BRAND_NAME } from "./brand";
 import { templates } from "../data/templates";
 import { emailHtml, filename } from "./email";
 
-describe("Email Sketch rebrand", () => {
-  it("renders the new accessible wordmark and logo asset", () => {
+describe("Emailmkt by Adscraft", () => {
+  it("renders the approved lockup and accessible name", () => {
     const html = renderToStaticMarkup(<Logo />);
-    expect(BRAND_NAME).toBe("Email Sketch");
-    expect(html).toContain(
-      'aria-label="Email Sketch by Adscraft Digital home"'
-    );
-    expect(html).toContain("by Adscraft Digital");
-    expect(html).toContain(BRAND_LOGO_URL);
-    expect(html).toContain("brand-sketch");
+    expect(BRAND_NAME).toBe("Emailmkt");
+    expect(BRAND_LOCKUP).toBe("Emailmkt by Adscraft");
+    expect(html).toContain('aria-label="Emailmkt by Adscraft home"');
+    expect(html).toContain(BRAND_LOGO_LIGHT);
+    expect(html).not.toContain("Email Sketch");
     expect(html).not.toContain("CopyMail");
+    const dark = renderToStaticMarkup(<Logo light />);
+    expect(dark).toContain("/brand/logo-lockup-dark.svg");
   });
 
   it("keeps the new name in both live previews and exported emails", () => {
     expect(
       renderToStaticMarkup(<EmailView document={templates[0]} />)
-    ).toContain("Made with Email Sketch");
-    expect(emailHtml(templates[0])).toContain(
-      "Made with Email Sketch by Adscraft Digital"
-    );
+    ).toContain("Made with Emailmkt by Adscraft");
+    expect(emailHtml(templates[0])).toContain("Made with Emailmkt by Adscraft");
     expect(emailHtml(templates[0]).toLowerCase()).not.toContain("#ffd84d");
-    expect(filename("!!!")).toBe("email-sketch-email");
+    expect(filename("!!!")).toBe("emailmkt-email");
   });
 
   it("endorses Adscraft Digital and retires the previous palette", () => {
@@ -39,12 +37,17 @@ describe("Email Sketch rebrand", () => {
     expect(css).toContain("poppins");
     expect(css).toContain("noto sans thai");
     expect(css).toContain("#7646d6");
+    expect(css).toContain("#ffb800");
+    expect(css).toContain("#fff8e6");
+    expect(css).toContain("#ffd465");
     expect(css).toContain("#111633");
     expect(css).toContain("#170528");
-    expect(css).toContain("#f4f1fa");
     expect(css).not.toContain("#ffd84d");
     expect(css).not.toContain("manrope");
     expect(layout).toContain("© 2026 Adscraft Digital");
+    expect(layout).toContain("Emailmkt");
+    expect(layout).not.toContain("Email Sketch");
+    expect(layout).not.toContain("ADSCRAFT");
     expect(layout).toContain("Get Found. Get Customers. Grow Better.");
     expect(layout).toContain("https://scout101.net/");
     expect(layout).toContain("https://rank-path.com");
@@ -53,6 +56,21 @@ describe("Email Sketch rebrand", () => {
     expect(layout).not.toContain("CopyElement");
     expect(layout).not.toContain("BrandKity");
     expect(layout).not.toContain("SEO45");
+  });
+
+  it.each([
+    ["#808080", "#170528"],
+    ["#ff0000", "#170528"],
+    ["#FFB800", "#170528"],
+    ["#7646D6", "#ffffff"],
+    ["#000000", "#ffffff"],
+    ["#ffffff", "#170528"],
+  ])("uses readable button text for %s in preview and export", (accent, text) => {
+    const document = { ...templates[0], accent };
+    const preview = renderToStaticMarkup(<EmailView document={document} />);
+    expect(preview).toContain(`background:${accent};color:${text}`);
+    expect(emailHtml(document)).toContain(`bgcolor="${accent}"`);
+    expect(emailHtml(document)).toContain(`color:${text};text-decoration:none`);
   });
 
   it("preserves the storage namespace used by existing projects and drafts", () => {

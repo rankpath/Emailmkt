@@ -23,8 +23,8 @@ export function ContactDialog({
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     downloadText(
-      "email-sketch-inquiry.txt",
-      `Email Sketch by Adscraft Digital inquiry${plan ? ` — ${plan} plan` : ""}\n\nName: ${form.get("name")}\nEmail: ${form.get("email")}\n\n${form.get("message")}\n`
+      "emailmkt-inquiry.txt",
+      `Emailmkt by Adscraft inquiry${plan ? ` — ${plan} plan` : ""}\n\nName: ${form.get("name")}\nEmail: ${form.get("email")}\n\n${form.get("message")}\n`
     );
     setDone(true);
   }

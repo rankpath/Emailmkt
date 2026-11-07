@@ -1,6 +1,11 @@
 import type { EmailDocument } from "../../data/templates";
 import { accentTextColor, safeUrl } from "../../lib/email";
-import { BRAND_LOGO_URL, BRAND_NAME } from "../../lib/brand";
+import {
+  BRAND_ICON,
+  BRAND_LOCKUP,
+  BRAND_LOGO_DARK,
+  BRAND_LOGO_LIGHT,
+} from "../../lib/brand";
 import { ArrowUpRight, Check } from "lucide-react";
 
 export function Logo({ light = false }: { light?: boolean }) {
@@ -8,17 +13,14 @@ export function Logo({ light = false }: { light?: boolean }) {
     <a
       href="/"
       className={`wordmark ${light ? "light" : ""}`}
-      aria-label={`${BRAND_NAME} by Adscraft Digital home`}
+      aria-label={`${BRAND_LOCKUP} home`}
     >
-      <span className="logo-mark">
-        <img src={BRAND_LOGO_URL} alt="" width={36} height={36} />
-      </span>
-      <span className="brand-lockup">
-        <span className="brand-name">
-          Email <span className="brand-sketch">Sketch</span>
-        </span>
-        <span className="brand-by">by Adscraft Digital</span>
-      </span>
+      <img
+        className="logo-lockup"
+        src={light ? BRAND_LOGO_DARK : BRAND_LOGO_LIGHT}
+        alt=""
+      />
+      <img className="logo-icon-only" src={BRAND_ICON} alt="" />
     </a>
   );
 }
@@ -100,7 +102,7 @@ export function EmailView({
       <div className="email-footer">
         {doc.brand} · Thoughtfully delivered.
         <br />
-        Made with Email Sketch by Adscraft Digital
+        Made with Emailmkt by Adscraft
       </div>
     </div>
   );

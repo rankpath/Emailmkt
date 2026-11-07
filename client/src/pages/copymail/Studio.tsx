@@ -91,7 +91,7 @@ export default function Studio({ params }: { params: { id: string } }) {
   const missing = params.id !== "new" && !existing && params.id !== doc.id;
 
   useEffect(() => {
-    document.title = `${doc.name} — Email Sketch by Adscraft Digital`;
+    document.title = `${doc.name} — Emailmkt by Adscraft`;
     const guard = (event: BeforeUnloadEvent) => {
       if (dirty) {
         event.preventDefault();

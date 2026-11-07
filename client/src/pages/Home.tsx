@@ -33,7 +33,7 @@ import { templates, filterTemplates } from "../data/templates";
 const testimonials = [
   {
     quote:
-      "Before using Email Sketch, our marketing team spent hours coding templates. Now, we build layouts in minutes and launch campaigns instantly.",
+      "Before using Emailmkt, our marketing team spent hours coding templates. Now, we build layouts in minutes and launch campaigns instantly.",
     name: "Jessica Harmon",
     role: "Senior Email Marketing Manager",
     company: "Walmart",
@@ -49,7 +49,7 @@ const testimonials = [
   },
   {
     quote:
-      "Email Sketch Studio’s template library is insanely comprehensive. We found the perfect newsletter layout and shipped our campaign the same day.",
+      "Emailmkt Studio’s template library is insanely comprehensive. We found the perfect newsletter layout and shipped our campaign the same day.",
     name: "Priya Nair",
     role: "Digital Communications Lead",
     company: "IBM",
@@ -57,7 +57,7 @@ const testimonials = [
   },
   {
     quote:
-      "Email Sketch templates render perfectly across every email provider. Pre-tested blocks ensure emails look great on both mobile and desktop.",
+      "Emailmkt templates render perfectly across every email provider. Pre-tested blocks ensure emails look great on both mobile and desktop.",
     name: "Min-jun Lee",
     role: "Global Email Strategist",
     company: "Samsung",
@@ -89,7 +89,7 @@ const testimonials = [
   },
   {
     quote:
-      "Email Sketch keeps our design system unified across all email operations. Newsletters look consistent no matter who designs them.",
+      "Emailmkt keeps our design system unified across all email operations. Newsletters look consistent no matter who designs them.",
     name: "Yuki Tanaka",
     role: "Brand Communications Lead",
     company: "Toyota",
@@ -98,11 +98,11 @@ const testimonials = [
 ];
 const faqs = [
   [
-    "How many email templates does Email Sketch have?",
-    "Email Sketch’s library is designed around 22,000+ professional HTML email templates across 150+ categories: newsletters, promotions, transactional emails, onboarding, product launches and more. This website preview includes a curated selection of 12 working example templates.",
+    "How many email templates does Emailmkt have?",
+    "Emailmkt’s library is designed around 22,000+ professional HTML email templates across 150+ categories: newsletters, promotions, transactional emails, onboarding, product launches and more. This website preview includes a curated selection of 12 working example templates.",
   ],
   [
-    "What is Email Sketch Studio?",
+    "What is Emailmkt Studio?",
     "Studio is your visual email workspace. Choose a template, edit the content and brand colors, add or reorder blocks, preview on desktop or mobile, and export HTML without starting from scratch. Try the working editor in this preview.",
   ],
   [
@@ -110,8 +110,8 @@ const faqs = [
     "Download HTML and import it into any platform that accepts custom HTML, including Mailchimp, Klaviyo, HubSpot, Resend and ActiveCampaign. This preview exports files; it does not connect to or send through your ESP account.",
   ],
   [
-    "Can I import my own HTML into Email Sketch Studio?",
-    "The full Email Sketch Studio workflow includes custom HTML import. This preview focuses on editing the included example templates and exporting HTML and JSON. Custom HTML import is not connected here.",
+    "Can I import my own HTML into Emailmkt Studio?",
+    "The full Emailmkt Studio workflow includes custom HTML import. This preview focuses on editing the included example templates and exporting HTML and JSON. Custom HTML import is not connected here.",
   ],
   [
     "Are the templates mobile-responsive and Outlook-compatible?",
@@ -119,7 +119,7 @@ const faqs = [
   ],
   [
     "Can I collaborate with my team?",
-    "Team workspaces and roles are part of Email Sketch’s full product vision. In this preview, projects are saved in your current browser. You can share a portable preview link for feedback, but cloud team accounts are not enabled.",
+    "Team workspaces and roles are part of Emailmkt’s full product vision. In this preview, projects are saved in your current browser. You can share a portable preview link for feedback, but cloud team accounts are not enabled.",
   ],
   [
     "Is there a free plan?",
@@ -151,7 +151,7 @@ export default function Home() {
           <div className="hero-copy">
             <div className="hero-announcement">
               <Sparkles size={13} />
-              <span>Email Sketch by Adscraft Digital</span>
+              <span>Emailmkt by Adscraft</span>
               <ArrowUpRight size={13} />
             </div>
             <h1>
@@ -163,7 +163,7 @@ export default function Home() {
             </h1>
             <p>
               Great emails start here. Browse professional templates, make them
-              yours in Email Sketch Studio, and export to any email platform. No
+              yours in Emailmkt Studio, and export to any email platform. No
               code. No starting from scratch.
             </p>
             <div className="hero-actions">
@@ -349,9 +349,9 @@ export default function Home() {
                 More standing out.
               </h2>
               <p>
-                Email Sketch is a product of Adscraft Digital. Finding a great
+                Emailmkt is a product of Adscraft. Finding a great
                 email template shouldn’t take longer than building the email.
-                That’s why we created Email Sketch: a world of possibilities,
+                That’s why we created Emailmkt: a world of possibilities,
                 and one simple way to make them yours.
               </p>
               <p>
@@ -383,7 +383,7 @@ export default function Home() {
         <section className="features-section section wrap" id="features">
           <div className="section-heading">
             <div>
-              <Label>Meet Email Sketch Studio</Label>
+              <Label>Meet Emailmkt Studio</Label>
               <h2>
                 Your ideas.
                 <br />
@@ -416,7 +416,7 @@ export default function Home() {
                 <div className="mini-editor-top">
                   <span>
                     <i />
-                    Email Sketch Studio
+                    Emailmkt Studio
                   </span>
                   <span>
                     <Monitor size={12} />

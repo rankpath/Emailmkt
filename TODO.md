@@ -25,3 +25,7 @@ Rebrand evidence: 19 tests passed, TypeScript check and static production build 
 ## Adscraft Digital rebrand — 29 Oct 2026
 
 - [x] **Present Email Sketch as a product of Adscraft Digital.** Keep the product name, routes, features, keyboard access, reduced-motion support and `copymail-workspace-v1` storage. Replace the yellow–black system with Ink #170528, Navy #111633, Purple #7646D6, Mist #F4F1FA and White, using Poppins and Noto Sans Thai. Endorse the product in the header, footer, metadata and export attribution. Use the company tagline “Get Found. Get Customers. Grow Better.” Copyright © 2026 Adscraft Digital. Footer products are Scout101 (https://scout101.net/), RankPath (https://rank-path.com) and Email Sketch. Do not deploy or publish, and do not enable the server or database.
+
+## Emailmkt by Adscraft — 2 Nov 2026
+
+- [x] **Rename the product to Emailmkt by Adscraft and ship the approved logo.** Use the cat-envelope lockup on light and dark surfaces, plus the favicon, apple touch icon, manifest icons and Open Graph image. Keep the Adscraft palette and `copymail-workspace-v1`. Footer products are Scout101, RankPath and Emailmkt. Do not deploy.

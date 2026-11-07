@@ -31,14 +31,14 @@ function Routes() {
     }
     if (location.startsWith("/studio/")) return;
     const titles: Record<string, string> = {
-      "/": "Email Sketch by Adscraft Digital — Email Templates, Made Yours",
-      "/templates": "Email Template Library — Email Sketch by Adscraft Digital",
-      "/projects": "Your Projects — Email Sketch by Adscraft Digital",
-      "/projects/new": "New Project — Email Sketch by Adscraft Digital",
-      "/preview": "Shared Email Preview — Email Sketch by Adscraft Digital",
+      "/": "Emailmkt by Adscraft — Email Templates, Made Yours",
+      "/templates": "Email Template Library — Emailmkt by Adscraft",
+      "/projects": "Your Projects — Emailmkt by Adscraft",
+      "/projects/new": "New Project — Emailmkt by Adscraft",
+      "/preview": "Shared Email Preview — Emailmkt by Adscraft",
     };
     document.title =
-      titles[location] || "Your Workspace — Email Sketch by Adscraft Digital";
+      titles[location] || "Your Workspace — Emailmkt by Adscraft";
     if (!window.location.hash) window.scrollTo(0, 0);
   }, [location]);
   return (
@@ -58,7 +58,7 @@ function Routes() {
             This page doesn’t exist. Let’s find you a better starting point.
           </p>
           <a className="button black" href="/">
-            Back to Email Sketch ↗
+            Back to Emailmkt ↗
           </a>
         </div>
       </Route>

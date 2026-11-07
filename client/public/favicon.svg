@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <title>Email Sketch</title>
-  <rect width="64" height="64" rx="14" fill="#111633"/>
-  <path d="M8 28.5 32 42.5 56 28.5V48L32 57.5 8 48V28.5Z" fill="#7646D6"/>
-  <path d="M8 28.5 32 16 56 28.5 32 39.2 8 28.5Z" fill="#9A74E8"/>
-  <path d="M16 44.5 32 53 48 44.5" stroke="#F4F1FA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="22 36 212 212"><path fill="#ffb800" d="M34 140c-4-44 2-88 26-94 16-4 38 16 64 50Zm188 0c4-44-2-88-26-94-16-4-38 16-64 50Z"/><path fill="#ff9aa8" d="M54 104c-2-22 2-40 12-42s24 12 34 30Zm148 0c2-22-2-40-12-42s-24 12-34 30Z"/><rect width="200" height="146" x="28" y="86" fill="#ffb800" rx="44"/><path fill="#ffd465" d="M28 128c0-22 18-42 44-42h112c26 0 44 20 44 42-30 0-60-8-100 4q-50-12-100-4"/><circle cx="88" cy="168" r="27" fill="#170528"/><circle cx="80" cy="159" r="10" fill="#fff"/><circle cx="168" cy="168" r="27" fill="#170528"/><circle cx="160" cy="159" r="10" fill="#fff"/><ellipse cx="56" cy="204" fill="#ff9aa8" rx="15" ry="9"/><ellipse cx="200" cy="204" fill="#ff9aa8" rx="15" ry="9"/><path fill="none" stroke="#170528" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" d="M110 194q9 12 18 0 9 12 18 0"/></svg>

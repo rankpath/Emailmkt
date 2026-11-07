@@ -74,7 +74,7 @@ export function WorkspaceShell({
           <CircleHelp size={17} />A little help
         </button>
         <a className="sidebar-home" href="/">
-          Back to Email Sketch <ArrowUpRight size={15} />
+          Back to Emailmkt <ArrowUpRight size={15} />
         </a>
       </aside>
       {menu && (

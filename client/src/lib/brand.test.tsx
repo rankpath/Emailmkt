@@ -58,6 +58,21 @@ describe("Emailmkt by Adscraft", () => {
     expect(layout).not.toContain("SEO45");
   });
 
+  it.each([
+    ["#808080", "#170528"],
+    ["#ff0000", "#170528"],
+    ["#FFB800", "#170528"],
+    ["#7646D6", "#ffffff"],
+    ["#000000", "#ffffff"],
+    ["#ffffff", "#170528"],
+  ])("uses readable button text for %s in preview and export", (accent, text) => {
+    const document = { ...templates[0], accent };
+    const preview = renderToStaticMarkup(<EmailView document={document} />);
+    expect(preview).toContain(`background:${accent};color:${text}`);
+    expect(emailHtml(document)).toContain(`bgcolor="${accent}"`);
+    expect(emailHtml(document)).toContain(`color:${text};text-decoration:none`);
+  });
+
   it("preserves the storage namespace used by existing projects and drafts", () => {
     const source = readFileSync("client/src/lib/workspace.tsx", "utf8");
     expect(source).toContain('const STORAGE_KEY = "copymail-workspace-v1"');

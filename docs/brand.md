@@ -1,6 +1,8 @@
 # Emailmkt brand
 
-Emailmkt by Adscraft uses the master logo 04 cat. The interface takes its colour from that mark. Poppins is the English face and Noto Sans Thai covers Thai text.
+Emailmkt by [Scout101](https://scout101.net/) uses the master logo 04 cat. The interface takes its colour from that mark. Poppins is the English face and Noto Sans Thai covers Thai text.
+
+The header, footer, and workspace credit is live text: “by Scout101”, linking to https://scout101.net/. “by Adscraft” is not live text. It is drawn as paths inside `logo-lockup.svg`, `logo-lockup-dark.svg`, the matching PNGs, and `og-image.png`. Those files are unchanged. The live credit covers that baked line where the lockup is shown. Copyright stays © 2026 Adscraft Digital.
 
 ## Palette
 
@@ -13,7 +15,7 @@ Emailmkt by Adscraft uses the master logo 04 cat. The interface takes its colour
 | Surface | White | `#FFFFFF` | Cards and the page header |
 | Text | Ink | `#170528` | Headings, body, and text on golden |
 | Dark | Navy | `#111633` | Footer, workspace navigation, dark bands |
-| Secondary | Purple | `#7646D6` | Links, small icons, the logo heart and “by Adscraft” |
+| Secondary | Purple | `#7646D6` | Links, small icons, the logo heart, and the live “by Scout101” credit |
 | Tiny accent | Blush | `#FF9AA8` | Reserved for small decoration. Not used as a fill |
 
 Text on golden is always Ink. White on `#FFB800` is about 1.7:1 and fails WCAG. Ink on golden is about 13:1. Purple on white is about 5.9:1, so it is safe for link text. A golden focus ring on white is below the 3:1 non-text requirement, so focus uses a 3px Ink outline with a golden halo.

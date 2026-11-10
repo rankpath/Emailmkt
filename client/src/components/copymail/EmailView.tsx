@@ -1,27 +1,47 @@
 import type { EmailDocument } from "../../data/templates";
 import { accentTextColor, safeUrl } from "../../lib/email";
 import {
+  BRAND_CREDIT,
+  BRAND_CREDIT_URL,
   BRAND_ICON,
-  BRAND_LOCKUP,
+  BRAND_NAME,
   BRAND_LOGO_DARK,
   BRAND_LOGO_LIGHT,
 } from "../../lib/brand";
 import { ArrowUpRight, Check } from "lucide-react";
 
-export function Logo({ light = false }: { light?: boolean }) {
+export function BrandCreditLink({
+  children = BRAND_CREDIT,
+  className = "brand-inline",
+}: {
+  children?: string;
+  className?: string;
+}) {
   return (
     <a
-      href="/"
-      className={`wordmark ${light ? "light" : ""}`}
-      aria-label={`${BRAND_LOCKUP} home`}
+      className={className}
+      href={BRAND_CREDIT_URL}
+      target="_blank"
+      rel="noopener noreferrer"
     >
-      <img
-        className="logo-lockup"
-        src={light ? BRAND_LOGO_DARK : BRAND_LOGO_LIGHT}
-        alt=""
-      />
-      <img className="logo-icon-only" src={BRAND_ICON} alt="" />
+      {children}
     </a>
+  );
+}
+
+export function Logo({ light = false }: { light?: boolean }) {
+  return (
+    <span className={`wordmark ${light ? "light" : ""}`}>
+      <a href="/" className="logo-home" aria-label={`${BRAND_NAME} home`}>
+        <img
+          className="logo-lockup"
+          src={light ? BRAND_LOGO_DARK : BRAND_LOGO_LIGHT}
+          alt=""
+        />
+        <img className="logo-icon-only" src={BRAND_ICON} alt="" />
+      </a>
+      <BrandCreditLink className="brand-credit">{BRAND_CREDIT}</BrandCreditLink>
+    </span>
   );
 }
 
@@ -102,7 +122,7 @@ export function EmailView({
       <div className="email-footer">
         {doc.brand} · Thoughtfully delivered.
         <br />
-        Made with Emailmkt by Adscraft
+        Made with {BRAND_NAME} <BrandCreditLink />
       </div>
     </div>
   );

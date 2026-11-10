@@ -2,20 +2,21 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { renderToString } from "react-dom/server";
 import Home from "../client/src/pages/Home";
 import Templates from "../client/src/pages/copymail/Templates";
+import { BRAND_LOCKUP } from "../client/src/lib/brand";
 
 const shell = await readFile("dist/public/index.html", "utf8");
 const pages = [
   {
     path: "",
     element: <Home />,
-    title: "Emailmkt by Adscraft — Email Templates, Made Yours",
+    title: `${BRAND_LOCKUP} — Email Templates, Made Yours`,
     description:
-      "Emailmkt by Adscraft. Great emails start here. Explore professional email templates, customize your design in Emailmkt Studio, and export HTML to your favorite email platform.",
+      `${BRAND_LOCKUP}. Great emails start here. Explore professional email templates, customize your design in Emailmkt Studio, and export HTML to your favorite email platform.`,
   },
   {
     path: "templates",
     element: <Templates />,
-    title: "Email Template Library — Emailmkt by Adscraft",
+    title: `Email Template Library — ${BRAND_LOCKUP}`,
     description:
       "Find your next great email. Browse editable newsletter, e-commerce, promotional and onboarding examples, preview each design, and make it yours in Studio.",
   },

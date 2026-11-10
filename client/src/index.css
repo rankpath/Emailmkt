@@ -5145,12 +5145,69 @@ select:focus {
 }
 .workspace-sidebar .logo-lockup,
 .site-footer .logo-lockup {
-  height: 48px;
+  height: var(--lockup-h, 48px);
+}
+.wordmark {
+  position: relative;
+  --lockup-h: 44px;
+}
+.logo-home {
+  display: block;
+  line-height: 0;
+}
+.logo-lockup {
+  height: var(--lockup-h);
+}
+/* Official lockup art draws “by Scout101”. This link is only the hit target. */
+.brand-credit {
+  position: absolute;
+  z-index: 2;
+  left: 32.8%;
+  top: 69.4%;
+  width: 37.4%;
+  height: 23.6%;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: none;
+  color: transparent;
+  font-size: calc(var(--lockup-h) * 0.2);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.wordmark.light .brand-credit {
+  background: transparent;
+  color: transparent;
+}
+.workspace-sidebar .wordmark,
+.site-footer .wordmark {
+  --lockup-h: 48px;
+}
+a.brand-inline {
+  color: #7646d6;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.hero-announcement a.brand-inline,
+.email-footer a.brand-inline {
+  color: inherit;
+  font-weight: inherit;
+}
+@media (max-width: 850px) {
+  .studio-header .brand-credit {
+    display: none;
+  }
 }
 @media (max-width: 640px) {
+  .site-header .wordmark,
+  .shared-preview-page > header .wordmark {
+    --lockup-h: 34px;
+  }
   .site-header .logo-lockup,
   .shared-preview-page > header .logo-lockup {
-    height: 34px;
+    height: var(--lockup-h);
   }
 }
 

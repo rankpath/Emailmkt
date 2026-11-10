@@ -8,6 +8,7 @@ import {
 } from "../ui/dialog";
 import { ArrowUpRight, Check, Download, Mail } from "lucide-react";
 import { downloadText } from "../../lib/email";
+import { BRAND_LOCKUP } from "../../lib/brand";
 
 export function ContactDialog({
   open,
@@ -24,7 +25,7 @@ export function ContactDialog({
     const form = new FormData(event.currentTarget);
     downloadText(
       "emailmkt-inquiry.txt",
-      `Emailmkt by Adscraft inquiry${plan ? ` — ${plan} plan` : ""}\n\nName: ${form.get("name")}\nEmail: ${form.get("email")}\n\n${form.get("message")}\n`
+      `${BRAND_LOCKUP} inquiry${plan ? ` — ${plan} plan` : ""}\n\nName: ${form.get("name")}\nEmail: ${form.get("email")}\n\n${form.get("message")}\n`
     );
     setDone(true);
   }

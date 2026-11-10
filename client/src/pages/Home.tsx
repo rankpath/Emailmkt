@@ -26,7 +26,12 @@ import {
   Zap,
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "../components/copymail/SiteLayout";
-import { EmailView, TemplateCard } from "../components/copymail/EmailView";
+import {
+  BrandCreditLink,
+  EmailView,
+  TemplateCard,
+} from "../components/copymail/EmailView";
+import { BRAND_NAME } from "../lib/brand";
 import { ContactDialog } from "../components/copymail/Dialogs";
 import { templates, filterTemplates } from "../data/templates";
 
@@ -151,7 +156,9 @@ export default function Home() {
           <div className="hero-copy">
             <div className="hero-announcement">
               <Sparkles size={13} />
-              <span>Emailmkt by Adscraft</span>
+              <span>
+                {BRAND_NAME} <BrandCreditLink />
+              </span>
               <ArrowUpRight size={13} />
             </div>
             <h1>
@@ -349,7 +356,8 @@ export default function Home() {
                 More standing out.
               </h2>
               <p>
-                Emailmkt is a product of Adscraft. Finding a great
+                Emailmkt is a product of{" "}
+                <BrandCreditLink>Scout101</BrandCreditLink>. Finding a great
                 email template shouldn’t take longer than building the email.
                 That’s why we created Emailmkt: a world of possibilities,
                 and one simple way to make them yours.

@@ -9,6 +9,7 @@ import {
   Youtube,
 } from "lucide-react";
 import { Logo } from "./EmailView";
+import { BRAND_LOCKUP } from "../../lib/brand";
 import { ContactDialog, InfoDialog } from "./Dialogs";
 
 export function SiteHeader({ active = "Home" }: { active?: string }) {
@@ -178,7 +179,7 @@ export function SiteFooter() {
                     onClick={() =>
                       setInfo({
                         title: String(name),
-                        text: `The official Emailmkt by Adscraft ${name} profile link can be connected before launch.`,
+                        text: `The official ${BRAND_LOCKUP} ${name} profile link can be connected before launch.`,
                       })
                     }
                   >
@@ -200,8 +201,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="footer-bottom wrap">
-          <span>© 2026 Adscraft Digital</span>
-          <span>Get Found. Get Customers. Grow Better.</span>
+          <span>© 2026 Scout101</span>
         </div>
       </footer>
       <ContactDialog open={contact} onOpenChange={setContact} />

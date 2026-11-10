@@ -13,6 +13,7 @@ import ProjectDetail from "./pages/copymail/ProjectDetail";
 import Studio from "./pages/copymail/Studio";
 import Preview from "./pages/copymail/Preview";
 import { Logo } from "./components/copymail/EmailView";
+import { BRAND_LOCKUP } from "./lib/brand";
 
 function Routes() {
   const [location] = useLocation();
@@ -31,14 +32,13 @@ function Routes() {
     }
     if (location.startsWith("/studio/")) return;
     const titles: Record<string, string> = {
-      "/": "Emailmkt by Adscraft — Email Templates, Made Yours",
-      "/templates": "Email Template Library — Emailmkt by Adscraft",
-      "/projects": "Your Projects — Emailmkt by Adscraft",
-      "/projects/new": "New Project — Emailmkt by Adscraft",
-      "/preview": "Shared Email Preview — Emailmkt by Adscraft",
+      "/": `${BRAND_LOCKUP} — Email Templates, Made Yours`,
+      "/templates": `Email Template Library — ${BRAND_LOCKUP}`,
+      "/projects": `Your Projects — ${BRAND_LOCKUP}`,
+      "/projects/new": `New Project — ${BRAND_LOCKUP}`,
+      "/preview": `Shared Email Preview — ${BRAND_LOCKUP}`,
     };
-    document.title =
-      titles[location] || "Your Workspace — Emailmkt by Adscraft";
+    document.title = titles[location] || `Your Workspace — ${BRAND_LOCKUP}`;
     if (!window.location.hash) window.scrollTo(0, 0);
   }, [location]);
   return (

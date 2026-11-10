@@ -5158,34 +5158,26 @@ select:focus {
 .logo-lockup {
   height: var(--lockup-h);
 }
-/* The lockup files still draw “by Adscraft”. This live credit covers that line. */
+/* Official lockup art draws “by Scout101”. This link is only the hit target. */
 .brand-credit {
   position: absolute;
   z-index: 2;
-  left: 32.4%;
-  top: 67.2%;
-  width: 39%;
-  height: 26.4%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 1.2%;
-  background: #ffffff;
-  box-shadow: 0 0 0 1px #ffffff;
-  color: #7646d6;
-  font-family: Poppins, "Noto Sans Thai", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+  left: 32.8%;
+  top: 69.4%;
+  width: 37.4%;
+  height: 23.6%;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: none;
+  color: transparent;
   font-size: calc(var(--lockup-h) * 0.2);
-  letter-spacing: -0.03em;
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
 }
 .wordmark.light .brand-credit {
-  background: #111633;
-  box-shadow: 0 0 0 1px #111633;
-  color: #b9a6f2;
+  background: transparent;
+  color: transparent;
 }
 .workspace-sidebar .wordmark,
 .site-footer .wordmark {

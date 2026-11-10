@@ -47,7 +47,7 @@ describe("Emailmkt by Scout101", () => {
     expect(filename("!!!")).toBe("emailmkt-email");
   });
 
-  it("endorses Adscraft Digital and retires the previous palette", () => {
+  it("credits Scout101 and retires the previous palette", () => {
     const css = readFileSync("client/src/index.css", "utf8").toLowerCase();
     const layout = readFileSync(
       "client/src/components/copymail/SiteLayout.tsx",
@@ -63,15 +63,18 @@ describe("Emailmkt by Scout101", () => {
     expect(css).toContain("#170528");
     expect(css).not.toContain("#ffd84d");
     expect(css).not.toContain("manrope");
-    expect(layout).toContain("© 2026 Adscraft Digital");
+    expect(layout).toContain("© 2026 Scout101");
+    expect(layout).not.toContain("Adscraft");
+    expect(layout).not.toContain("Get Found. Get Customers. Grow Better.");
     expect(layout).toContain("Emailmkt");
     expect(layout).not.toContain("Email Sketch");
     expect(layout).not.toContain("ADSCRAFT");
-    expect(layout).toContain("Get Found. Get Customers. Grow Better.");
     expect(layout).toContain("https://scout101.net/");
     const page = readFileSync("client/index.html", "utf8");
     const manifest = readFileSync("client/public/site.webmanifest", "utf8");
     expect(page).toContain("Emailmkt by Scout101");
+    expect(page).toContain("/og-image.png?v=3");
+    expect(page).toContain("/favicon.svg?v=2");
     expect(page).not.toContain("Adscraft");
     expect(manifest).toContain('"name": "Emailmkt by Scout101"');
     expect(manifest).toContain('"short_name": "Emailmkt"');

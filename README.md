@@ -1,6 +1,6 @@
 # Emailmkt by Scout101 — Email Templates & Studio
 
-Emailmkt by [Scout101](https://scout101.net/). React / Express / tRPC / Drizzle starter, adapted from the Sandbox web-db-user template.
+Emailmkt by [Scout101](https://scout101.net/). Copyright © 2026 Scout101. React / Express / tRPC / Drizzle starter, adapted from the Sandbox web-db-user template.
 
 - `pnpm dev`: development server; honors `PORT` (default 3000).
 - `pnpm build` / `pnpm start`: build and serve `dist/index.js` and `dist/public/`.

@@ -201,8 +201,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="footer-bottom wrap">
-          <span>© 2026 Adscraft Digital</span>
-          <span>Get Found. Get Customers. Grow Better.</span>
+          <span>© 2026 Scout101</span>
         </div>
       </footer>
       <ContactDialog open={contact} onOpenChange={setContact} />

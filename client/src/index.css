@@ -4627,8 +4627,8 @@ svg {
   }
 }
 
-/* Adscraft Digital — 29 Oct 2026
-   Ink #170528, navy #111633, purple #FFB800 and mist #FFF8E6.
+/* Emailmkt by Scout101
+   Ink #170528, navy #111633, golden #FFB800 and cream #FFF8E6.
    Poppins is the English face; Noto Sans Thai covers Thai text. */
 .button.black,
 .button.accent {
@@ -4918,8 +4918,7 @@ select:focus {
 .footer-brand > p,
 .footer-columns a,
 .footer-columns button,
-.social-links > button,
-.adscraft-tagline {
+.social-links > button {
   color: #b7b0c9;
 }
 .footer-columns h4 {
@@ -4933,34 +4932,6 @@ select:focus {
 .footer-bottom {
   border-top-color: #2a2744;
   color: #a39cb8;
-}
-.adscraft-endorse {
-  margin-top: 22px;
-  padding-top: 16px;
-  border-top: 1px solid #2a2744;
-}
-.adscraft-wordmark {
-  display: flex;
-  flex-direction: column;
-  line-height: 0.95;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: #ffffff;
-}
-.adscraft-wordmark span:first-child {
-  font-size: 18px;
-}
-.adscraft-wordmark span:last-child {
-  margin-top: 4px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.28em;
-  color: #d4c4f7;
-}
-.adscraft-tagline {
-  margin-top: 8px;
-  font-size: 11px;
-  line-height: 1.5;
 }
 .gallery-page {
   position: relative;

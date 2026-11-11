@@ -22,10 +22,6 @@ TypeScript check passed. All 10 targeted template, free-limit, safe-HTML and Uni
 
 Rebrand evidence: 19 tests passed, TypeScript check and static production build passed. The final SVG favicon/header logo and durable project-logo URL returned identical bytes with HTTP 200. Home/gallery metadata and all seven routes were checked. The legacy browser-local storage namespace remains unchanged, and a focused read-only review found no confirmed rebrand issues. Server/database remain disabled pending the earlier explicit approval request.
 
-## Adscraft Digital rebrand — 29 Oct 2026
+## Emailmkt by Scout101
 
-- [x] **Present Email Sketch as a product of Adscraft Digital.** Keep the product name, routes, features, keyboard access, reduced-motion support and `copymail-workspace-v1` storage. Replace the yellow–black system with Ink #170528, Navy #111633, Purple #7646D6, Mist #F4F1FA and White, using Poppins and Noto Sans Thai. Endorse the product in the header, footer, metadata and export attribution. Use the company tagline “Get Found. Get Customers. Grow Better.” Copyright © 2026 Adscraft Digital. Footer products are Scout101 (https://scout101.net/), RankPath (https://rank-path.com) and Email Sketch. Do not deploy or publish, and do not enable the server or database.
-
-## Emailmkt by Adscraft — 2 Nov 2026
-
-- [x] **Rename the product to Emailmkt by Adscraft and ship the approved logo.** Use the cat-envelope lockup on light and dark surfaces, plus the favicon, apple touch icon, manifest icons and Open Graph image. Keep the Adscraft palette and `copymail-workspace-v1`. Footer products are Scout101, RankPath and Emailmkt. Do not deploy.
+- [x] **Present the product as Emailmkt by Scout101.** The credit links to https://scout101.net/. Keep the routes, features, keyboard access, reduced-motion support and `copymail-workspace-v1` storage. Use Golden `#FFB800`, Ink `#170528`, Cream `#FFF8E6`, Navy `#111633`, and Purple `#7646D6` as an accent, with Poppins and Noto Sans Thai. Copyright © 2026 Scout101. Footer products are Scout101 (https://scout101.net/), RankPath (https://rank-path.com) and Emailmkt.
